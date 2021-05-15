@@ -9,14 +9,14 @@ import (
 
 func One() {
 	inputSlice := inputs.Day1
-	var target = int(2020)
 	sort.Ints(inputSlice[:])
-	var a, b = WalkInward(inputSlice, target)
-	var multiplied int = a*b
-	fmt.Println(multiplied)
+	var target = int(2020)
+
+	var a, b = walkInward(inputSlice, target)
+	fmt.Println(a*b)
 }
 
-func WalkInward(arr []int, t int) (a, b int) {
+func walkInward(arr []int, t int) (a, b int) {
 	var lhs int = 0
 	var rhs int = len(arr) - 1
 
